@@ -1,0 +1,9 @@
+.recipeFinderSearch {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.mealType, .pantryItems {
+    border-color: black;
+    border: 10px;
+}
