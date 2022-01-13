@@ -1,9 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif,Source Code Pro;
+    margin: 0;
+    padding: 0;
+}
+
+
+
 .recipeFinderSearch {
     display: flex;
     justify-content: space-evenly;
+    width: 100%;
 }
 
-.mealType, .pantryItems {
-    border-color: black;
-    border: 10px;
+.container {
+    width: 100%;
+    border: azure solid;
+    text-align: center;
+    margin: 5px 10px;
+    box-shadow: 2px 2px #05445E;
+    border-radius: 10px;
+    padding: 10px 0;
+
+}
+
+.mealType {
+    background-image: url(https://cdn.pixabay.com/photo/2016/03/10/18/44/top-view-1248955_1280.jpg);
+    background-size: cover;
+}
+
+.pantryItems {
+    background-image: url(https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466_1280.jpg);
+    background-size: cover;
+}
+
+
+.searchBtn {
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    
+}
+
+
+.input {
+    background-color: #b1d4e0;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 17px;
+
+}
+
+.h2 {
+    font-family: 'Cabin', sans-serif;
+    color: #ecfdf1;
+    font-size: 38px;
+    margin: 10px 0;
+    text-shadow: 1px 1px black;
+    text-decoration: underline;
+}
+
+.dropdown {
+    margin-top: 30px;
 }
