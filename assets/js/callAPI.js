@@ -5,7 +5,9 @@ var pantry = ["Milk", "Eggs", "Bread"];
 var stringOfIngredient = "";
 var apiURLRequest;
 
-searchBtn.addEventListener("click", callAPI(pantry));
+searchBtn.addEventListener("click", function(){
+    callAPI(pantry);
+});
 
 function callAPI(foodItems){
     if(foodItems.length != 0){
@@ -24,7 +26,7 @@ function callAPI(foodItems){
                 return response.json();
             })
             .then(function(data){
-                console.log(data);
+                console.log(data)
             })
     }
     else{
