@@ -8,8 +8,6 @@ body {
     padding: 0;
 }
 
-
-
 .recipeFinderSearch {
     display: flex;
     justify-content: space-evenly;
@@ -68,6 +66,42 @@ body {
     text-decoration: underline;
 }
 
+.pantryitemslist {
+    list-style: none;
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+}
+
+.pantryitemslist li {
+    color: green;
+}
+
+.emptypantry p{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(0, 255, 21);
+    padding: 10px;
+    max-width: 500px;
+    max-height: 50px;
+}
+
+.search p {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(0, 255, 21);
+    padding: 10px;
+    max-width: 500px;
+    max-height: 50px;
+}
+
 .dropdown {
+    position: relative;
     margin-top: 30px;
 }
