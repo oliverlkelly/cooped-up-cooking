@@ -43,11 +43,11 @@ var selectedparameter= $(this).text();
 var parameteroptions = $(this).parent().attr("id");
 localStorage.setItem(parameteroptions, selectedparameter);
 })
-$(".search").on("click", function(){
-    localStorage.getItem('cuisine');
-    localStorage.getItem('mealtype');
-    localStorage.getItem('cooktime');
-    localStorage.getItem('pantryitemslist');
-})
+// $(".search").on("click", function(){
+//     localStorage.getItem('cuisine');
+//     localStorage.getItem('mealtype');
+//     localStorage.getItem('cooktime');
+//     localStorage.getItem('pantryitemslist');
+// })
 
 })

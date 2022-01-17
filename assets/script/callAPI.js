@@ -1,17 +1,14 @@
 var searchBtn = document.querySelector("#searchBtn");
 var apiKey = "58cbc000b937473796ed1b4bcb46acc1"
 var apiURL = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=58cbc000b937473796ed1b4bcb46acc1"
-var pantry = ["Milk", "Eggs", "Bread"];
+var pantry;
 var stringOfIngredient = "";
 var apiURLRequest;
 
-searchBtn.addEventListener("click", function(){
-    callAPI(pantry);
-});
-
-function callAPI(foodItems){
+function callAPI(jsonFoodItems){
+    var foodItems = JSON.parse(jsonFoodItems);
     if(foodItems.length != 0){
-        pantry.forEach(e =>{
+        foodItems.forEach(e =>{
             stringOfIngredient = stringOfIngredient.concat("+" + e);
         })
         while(stringOfIngredient.charAt(0) === '+'){
@@ -34,3 +31,10 @@ function callAPI(foodItems){
     }
     
 }
+
+console.log("script start");
+searchBtn.addEventListener("click", function(){
+    console.log("clicked");
+    pantry = localStorage.getItem("pantryitemslist");
+    callAPI(pantry);
+});
