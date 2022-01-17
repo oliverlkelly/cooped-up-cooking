@@ -158,18 +158,19 @@ var recipeContent = [
 var recipeCards = document.querySelector(".recipeCards")
 
 function addRecipeContent() {
-    console.log(recipeContent.length);
-        for (var i = 0; i < recipeContent.length; i++) {
-            var recipeCardEl = document.createElement('div');
-            recipeCardEl.setAttribute("class", "col-4 border border-primary rounded p-5")
-            var recipeNameEl = document.createElement("h4");
-            var recipeImageEl = document.createElement("img");
-            recipeCardEl.setAttribute("id", recipeContent[i].id);
-            recipeNameEl.textContent = recipeContent[i].title;
-            recipeImageEl.src = recipeContent[i].image;
-            recipeCards.appendChild(recipeCardEl)
-            recipeCardEl.appendChild(recipeNameEl);
-            recipeCardEl.appendChild(recipeImageEl);
-        }
+    for (var i = 0; i < recipeContent.length; i++) {
+        var recipeCardEl = document.createElement('div');
+        recipeCardEl.setAttribute("class", "col-4 border border-primary rounded p-5")
+        var recipeNameEl = document.createElement("h4");
+        var recipeImageEl = document.createElement("img");
+        recipeCardEl.setAttribute("id", recipeContent[i].id);
+        recipeNameEl.textContent = recipeContent[i].title;
+        recipeNameEl.setAttribute("class", "text-center");
+        recipeImageEl.src = recipeContent[i].image;
+        recipeImageEl.setAttribute("class", "w-100 p-1");
+        recipeCards.appendChild(recipeCardEl)
+        recipeCardEl.appendChild(recipeNameEl);
+        recipeCardEl.appendChild(recipeImageEl);
+    }
   }
   addRecipeContent();
