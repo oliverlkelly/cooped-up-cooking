@@ -32,9 +32,8 @@ function callAPI(jsonFoodItems){
     
 }
 
-console.log("script start");
 searchBtn.addEventListener("click", function(){
-    console.log("clicked");
     pantry = localStorage.getItem("pantryitemslist");
     callAPI(pantry);
 });
+
