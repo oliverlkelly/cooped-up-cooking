@@ -3,7 +3,7 @@ $(document).ready(function(){
         var pantryitemslist = JSON.parse(localStorage.getItem('pantryitemslist'))}
         else { var pantryitemslist = []};
         console.log(pantryitemslist);
-        var pantryList = $('ul.pantryitemslist');
+        var pantryList = $('#pantryitemslist');
         $.each(pantryitemslist, function(i)
         {
             var li = $('<li/>')
@@ -12,13 +12,11 @@ $(document).ready(function(){
                 .appendTo(li);
         });
 
-$(".pantryItemstextentry").keypress(function (e) {
-    var key = e.which;
-    if(key == 13)  // the enter key code
-    { 
-    var newpantryitem = $(this).val();
-    $(this).val('');
-    var pantryList = $('ul.pantryitemslist')
+$("#pantryitementrybtn").on("click", function() {
+    console.log("yyyyy");
+    var newpantryitem = $("#pantryiteminput").val();
+    $("#pantryiteminput").val('');
+    var pantryList = $('#pantryitemslist')
         {
             var li = $('<li/>')
                 .appendTo(pantryList)
@@ -31,19 +29,20 @@ $(".pantryItemstextentry").keypress(function (e) {
     console.log(newpantryitem);
     console.log(pantryitemslist);
     localStorage.setItem('pantryitemslist', JSON.stringify(pantryitemslist));
-}
 })
-$(".emptypantry").on("click", function() {
+
+$("#EmptypantryBtn").on("click", function() {
     document.getElementById("pantryitemslist").innerHTML = "";
-    localStorage.clear();
+    localStorage.removeItem('pantryitemslist');
     pantryitemslist = [];
+
 });
 $(".dropdown-item").on("click", function() {
 var selectedparameter= $(this).text();
 var parameteroptions = $(this).parent().attr("id");
 localStorage.setItem(parameteroptions, selectedparameter);
 })
-$(".search").on("click", function(){
+$("#searchBtn").on("click", function(){
     localStorage.getItem('cuisine');
     localStorage.getItem('mealtype');
     localStorage.getItem('cooktime');
