@@ -25,11 +25,11 @@ function callAPI(jsonFoodItems){
             .then(function(data){
                 localStorage.setItem("recipeNames", JSON.stringify(data));
             })
+            location.href = 'recipeItems.html';
     }
     else{
         window.confirm("please enter some items");
     }
-    
 }
 
 searchBtn.addEventListener("click", function(){
