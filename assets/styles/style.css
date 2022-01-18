@@ -78,13 +78,14 @@ body {
 
 .pantryitemslist {
     list-style: none;
-    columns: 3;
-    -webkit-columns: 3;
-    -moz-columns: 3;
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+    list-style-type: disc;
 }
 
 .pantryitemslist li {
-    color: green;
+    color: red;
 }
 
 .emptypantry p{
