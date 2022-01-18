@@ -1,12 +1,9 @@
 
-var saveBtnEl = document.querySelector(".addBtn");
-var ingredientEl = document.querySelector(".input");
 
-saveBtnEl.addEventListener ('click', function(event){
 
 var elementLi = document.createElement("li");
 elementLi.classList.add("pantryLi");
-elementLi.textContent = ingredientEl.value;
+elementLi.textContent = "apple";
 console.log(elementLi);
 var spanLi = document.createElement("span");
 spanLi.classList.add("close");
@@ -16,7 +13,6 @@ var itemsUl = document.querySelector(".itemList");
 itemsUl.appendChild(elementLi);
 console.log(itemsUl);
 
-})
 
 
 
