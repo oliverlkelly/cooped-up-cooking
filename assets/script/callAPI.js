@@ -36,4 +36,3 @@ searchBtn.addEventListener("click", function(){
     pantry = localStorage.getItem("pantryitemslist");
     callAPI(pantry);
 });
-
