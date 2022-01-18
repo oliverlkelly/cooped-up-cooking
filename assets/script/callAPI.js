@@ -23,7 +23,7 @@ function callAPI(jsonFoodItems){
                 return response.json();
             })
             .then(function(data){
-                console.log(data)
+                localStorage.setItem("recipeNames", JSON.stringify(data));
             })
     }
     else{
