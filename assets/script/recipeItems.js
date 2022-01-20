@@ -160,7 +160,7 @@ var recipeCards = document.querySelector(".recipeCards")
 function addRecipeContent() {
     for (var i = 0; i < recipeContent.length; i++) {
         var recipeCardEl = document.createElement('div');
-        recipeCardEl.setAttribute("class", "col-4 border border-primary rounded p-5")
+        recipeCardEl.setAttribute("class", "col-4 border rounded p-5")
         var recipeNameEl = document.createElement("h4");
         var recipeImageEl = document.createElement("img");
         recipeCardEl.setAttribute("id", recipeContent[i].id);
