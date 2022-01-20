@@ -30,6 +30,10 @@ $("#pantryitementrybtn").on("click", function() {
     removebutton();
 });
 
+$("#RecipeBookBtn").on("click", function(){
+    location.href = "recipeItems.html";
+})
+
 function removebutton() {
 var closebtns = document.getElementsByClassName("pantryitemremoveBtn");
 var i;
