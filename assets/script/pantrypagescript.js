@@ -19,7 +19,6 @@ function removeAllItems(){
     pantryitemslist = [];
 }
 function buildList(){
-    var pantryList = $('.pantryitemslist');
     $.each(pantryitemslist, function(i){
         addItem(pantryitemslist[i]);
     });
