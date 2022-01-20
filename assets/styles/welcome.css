@@ -14,12 +14,10 @@
     border-radius: 50%;
     border:10px solid white;
     overflow:hidden;
-          
-    background: #4679BD; 
     box-shadow: 0 0 3px gray;
   }
   .round-button-circle:hover {
-    background:#30588e;
+    background: rgba(255,255,255,0.5);
   }
   .round-button a {
     display:block;
@@ -29,10 +27,20 @@
     padding-bottom:50%;
           
     text-align:center;
-    color: white;
+    color: rgb(117, 228, 117);
     font-family:Verdana;
     font-size:1.2em;
     font-weight:bolder;
     font-size: 40px;
     text-decoration:none;
+  }
+
+  #myVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh;
+    object-fit: cover;
+
   }

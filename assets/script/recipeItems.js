@@ -2,7 +2,13 @@ var recipeNamesLs = localStorage.getItem("recipeNames");
 var recipeNames = JSON.parse(recipeNamesLs);
 
 
-var recipeCards = document.querySelector(".recipeCards")
+var recipeCards = document.querySelector(".recipeCards");
+
+$("#recipefinderBtn").on("click", function(){
+    location.href = "recipeFinder.html";
+});
+
+
 
 function createRecipeCards() {
     console.log(recipeNames)

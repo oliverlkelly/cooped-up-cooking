@@ -55,6 +55,9 @@ $("#pantryitementrybtn").on("click", function(){
     localStorage.setItem('pantryitemslist', JSON.stringify(pantryitemslist));
 });
 
+$("#RecipeBookBtn").on("click", function(){
+    location.href = "recipeItems.html";
+})
 
 $("#EmptypantryBtn").on("click", function() {
     removeAllItems();
