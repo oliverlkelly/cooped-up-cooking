@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
-     <title>Cooped up cooking</title>
+    <title>Cooped up cooking</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <link rel="stylesheet" href="./assets/styles/style.css"/>
 </head>
 <body>
-    <header class="navbar-dark bg-primary">
+  <header class="navbar-dark">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Cooped up cooking</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+                <button id="navToggler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="nav">
@@ -35,70 +35,37 @@
         </nav>
     </header>
     <main class="recipeFinderSearch">
-       <section class="mealType container" style="width:40%">
-            <h2 class ="meal h2">Meal type</h2>
 
-            <div class="dropdown" >
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #b1d4e0; color: black;">
-                  Pick your Meal Type
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="mealtype">
-                  <a class="dropdown-item" href="#">Breakfast</a>
-                  <a class="dropdown-item" href="#">Lunch</a>
-                  <a class="dropdown-item" href="#">Dinner</a>
-                </div>
-                <div class="mealType" id="selectedoption" style="margin-top: 20px; font-weight: bold; color: white;">Breakfast</div>
-              </div>
-              <div class="dropdown" >
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #b1d4e0; color: black;">
-                  Pick your Cuisine
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="cuisine">
-                  <a class="dropdown-item" href="#">indian</a>
-                  <a class="dropdown-item" href="#">mexican</a>
-                  <a class="dropdown-item" href="#">italian</a>
-                </div>
-                <div class="cuisine" id="selectedoption" style="margin-top: 20px; font-weight: bold; color: white;">Cuisine</div>
-              </div>
-              <div class="dropdown" >
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #b1d4e0; color: black;">
-                  Pick your preferred cooking time
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="cooktime">
-                  <a class="dropdown-item" href="#">less than 30 minutes</a>
-                  <a class="dropdown-item" href="#">30 minutes to an hour</a>
-                  <a class="dropdown-item" href="#">hour or more</a>
-                </div>
-                <div class="cooktime" id="selectedoption" style="margin-top: 20px; font-weight: bold; color: white;">Cook time</div>
-              </div>
-       </section> 
-       
+      <div class="welcomeMessage"> 
+        <h3>Welcome to Cooped up cooking!</h3>
+        <p>We'll help you find recipes that you can make now, with the items you already have in your pantry!</p>
+      </div>
+      <section class="pantryItems container" style="width:60%;">
+        <h2 class="items h2">Pantry items</h2>
+        <p style="font-size:large; color: #ecfdf1;">Add your pantry items to the list then hit Search!</p>
+          <div>
+              <input class="input" placeholder="add items" id="pantryiteminput"></input>
+              <button type="button" class="btn btn-info" id="pantryitementrybtn">Add</button>
+            </div>    
+          <div class="listItem" style="color: white;">
+              <ul class="pantryitemslist" id="pantryitemslist"></ul>
+          </div>
 
-       <section class="pantryItems container" style="width:60%;">
-            <h2 class="items h2">Pantry items</h2>
-            <p style="font-size:large; color: #ecfdf1;">Add your pantry items to the list then hit Search!</p>
-            <div>
-
-                <input class="input" placeholder="add items" id="pantryiteminput"></input>
-                <button type="button" class="btn btn-info" id="pantryitementrybtn">Add</button>
-              </div>    
-            <div class="listItem" style="color: white;">
-                <ul class="pantryitemslist" id="pantryitemslist"></ul>
-            </div>
-            <button type="button" class="searchBtn btn-light" id="searchBtn">Search</button>
-            <div>
-            <button type="button" class="emptypantryBtn btn-dark" id="EmptypantryBtn">empty pantry</button>
-        </div>
-          </section>
+          <div>
+            <button type="button" class="searchBtn btn" id="searchBtn">Search</button>
+            <button type="button" class="emptypantryBtn btn" id="EmptypantryBtn">Empty pantry</button>
+          </div>
+      </section>
     </main>
 
     
-        <footer class="footer" style="height: 100%; border-top: 1px solid silver; margin-top: 5px;">
-          <div style="display: flex; align-items: center; justify-content: space-between; padding: 28px; margin-top: 5px; background-color: #0c6efd;"> 
-            <span style="margin-left: 10px; color: white;">&#169; Cooped up Cooking, Inc</span>
-            <a class="fa fa-github" style="font-size:48px; color: white; justify-content: flex-end; margin-right: 20px;" href="https://github.com/oliverlkelly/cooped-up-cooking" target="_blank"></a>
-          </div>        
-        </footer>
+
+    <footer class="footer">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px; margin-top: 5px;"> 
+        <span style="margin-left: 10px; color: white;">&#169; Cooped up Cooking, Inc</span>
+        <a class="fa fa-github" style="font-size:48px; justify-content: flex-end; margin-right: 20px; color: white;" href="https://github.com/oliverlkelly/cooped-up-cooking" target="_blank"></a>
+      </div>        
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
