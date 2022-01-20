@@ -14,11 +14,6 @@
 
 h3 {
     font-size: 40px;
-
-body {
-    font-family: Arial, Helvetica, sans-serif,Source Code Pro;
-    margin: 0;
-    padding: 0;
 }
 
 .recipeFinderSearch {
@@ -85,6 +80,8 @@ h2 p {
 
 input, .nav-link {
     font-family:Arial, Helvetica, sans-serif
+
+}
 .pantryitemslist {
     list-style: none;
     columns: 1;
