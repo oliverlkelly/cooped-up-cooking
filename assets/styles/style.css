@@ -3,7 +3,6 @@
     font-family: 'Caveat', cursive; 
 }
 
-
 .welcomeMessage {
     text-align: center;
     margin: 20px;
@@ -14,46 +13,6 @@
 
 h3 {
     font-size: 40px;
-
-body {
-    font-family: Arial, Helvetica, sans-serif,Source Code Pro;
-    margin: 0;
-    padding: 0;
-}
-
-.recipeFinderSearch {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    min-height:400px;
-    height: max-content;
-
-}
-
-.container {
-    width: 100%;
-    border: azure solid;
-    text-align: center;
-    margin: 5px 10px;
-    box-shadow: 2px 2px #05445E;
-    border-radius: 10px;
-    padding: 10px 0;
-    min-height: 400px;
-    height: max-content;
-
-
-}
-
-.mealType {
-    background-image: url(https://cdn.pixabay.com/photo/2016/03/10/18/44/top-view-1248955_1280.jpg);
-    background-size: cover;
-}
-
-.pantryItems {
-    background-image: url(https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466_1280.jpg);
-    background-size: cover;
-
 }
 
 header, footer, .pantryitemslist li {
@@ -74,7 +33,6 @@ h2 p {
     font-family: 'Caveat', cursive; 
 }
 
-
 .btn, button, #searchBtn, #EmptypantryBtn, #pantryitementrybtn, #navbarToggler, #recipeCardEl {
     background-color: white;
     border-color: #1d6630;
@@ -85,16 +43,6 @@ h2 p {
 
 input, .nav-link {
     font-family:Arial, Helvetica, sans-serif
-.pantryitemslist {
-    list-style: none;
-    columns: 1;
-    -webkit-columns: 1;
-    -moz-columns: 1;
-    list-style-type: disc;
-}
-
-.pantryitemslist li {
-    color: red;
 }
 
 .btn:hover, button:hover, #searchBtn:hover, #EmptypantryBtn:hover, #pantryitementrybtn:hover {
@@ -107,56 +55,9 @@ input, .nav-link {
     width: 100%;
 }
 
-
 footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
   }
-
-.itemList {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 10px;
-    width: 350px;
-    display: inline-block;
-  }
-  
-  .pantryLi {
-    border: 1px solid #ddd;
-    margin-top: -1px; /* Prevent double borders */
-    background-color: #f6f6f6;
-    padding: 5px;
-    text-decoration: none;
-    font-size: 17px;
-    color: black;
-    display: block;
-    position: relative;
-  }
-  
-  .pantryLi:hover {
-    background-color: silver;
-  }
-  
-  .close {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    right: 0%;
-    padding: 5px 12px;
-    transform: translate(0%, -50%);
-  }
-  
-  .close:hover {background: purple;}
-
-  .pantryItemsbg {
-    background-image: url(https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466_1280.jpg);
-    background-size: cover;
-  }
-  
-  main {
-      height: max-content;
-  }
-
-  

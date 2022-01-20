@@ -1,10 +1,9 @@
 var searchBtn = document.querySelector("#searchBtn");
 var apiKey = "58cbc000b937473796ed1b4bcb46acc1"
-var apiURL = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=`
+var apiURL = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=58cbc000b937473796ed1b4bcb46acc1"
 var pantry;
 var stringOfIngredient = "";
 var apiURLRequest;
-var numberOfResults = 16;
 
 function callAPI(jsonFoodItems){
     var foodItems = JSON.parse(jsonFoodItems);
@@ -15,7 +14,7 @@ function callAPI(jsonFoodItems){
         while(stringOfIngredient.charAt(0) === '+'){
             stringOfIngredient = stringOfIngredient.substring(1);
         }
-        apiURLRequest = `${apiURL}${apiKey}&includeIngredients=${stringOfIngredient}&number=${numberOfResults}&instructionRequired=true&addRecipeInformation=true`;
+        apiURLRequest = apiURL + '&ingredients=' + stringOfIngredient;
         fetch(apiURLRequest, {
             method: 'GET',
             redirect: 'follow',
@@ -26,14 +25,15 @@ function callAPI(jsonFoodItems){
             .then(function(data){
                 localStorage.setItem("recipeNames", JSON.stringify(data));
             })
-            location.href = 'recipeItems.html';
     }
     else{
-        window.confirm("Please enter some items");
+        window.confirm("please enter some items");
     }
+    
 }
 
 searchBtn.addEventListener("click", function(){
     pantry = localStorage.getItem("pantryitemslist");
     callAPI(pantry);
 });
+
