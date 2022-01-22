@@ -63,7 +63,7 @@ body {
     border-radius: 5px;
     margin-top: 20px;
     background-color: white;
-    color: black;
+    border-color: green;
 }
 
 #pantryitementrybtn {
@@ -94,7 +94,6 @@ body {
     columns: 1;
     -webkit-columns: 1;
     -moz-columns: 1;
-    list-style-type: disc;
 }
 
 .emptypantry p{
