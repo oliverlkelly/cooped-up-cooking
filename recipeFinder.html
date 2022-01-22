@@ -36,58 +36,25 @@
     </header>
     <main class="recipeFinderSearch">
        <section class="mealType container" style="width:40%">
-            <h2 class ="meal h2">Meal type</h2>
-
-            <div class="dropdown" >
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #b1d4e0; color: black;">
-                  Pick your Meal Type
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="mealtype">
-                  <a class="dropdown-item" href="#">Breakfast</a>
-                  <a class="dropdown-item" href="#">Lunch</a>
-                  <a class="dropdown-item" href="#">Dinner</a>
-                </div>
-                <div class="mealType" id="selectedoption" style="margin-top: 20px; font-weight: bold; color: white;">Breakfast</div>
-              </div>
-              <div class="dropdown" >
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #b1d4e0; color: black;">
-                  Pick your Cuisine
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="cuisine">
-                  <a class="dropdown-item" href="#">indian</a>
-                  <a class="dropdown-item" href="#">mexican</a>
-                  <a class="dropdown-item" href="#">italian</a>
-                </div>
-                <div class="cuisine" id="selectedoption" style="margin-top: 20px; font-weight: bold; color: white;">Cuisine</div>
-              </div>
-              <div class="dropdown" >
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #b1d4e0; color: black;">
-                  Pick your preferred cooking time
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="cooktime">
-                  <a class="dropdown-item" href="#">less than 30 minutes</a>
-                  <a class="dropdown-item" href="#">30 minutes to an hour</a>
-                  <a class="dropdown-item" href="#">hour or more</a>
-                </div>
-                <div class="cooktime" id="selectedoption" style="margin-top: 20px; font-weight: bold; color: white;">Cook time</div>
-              </div>
+            <h2 class ="meal h2">Welcome to Cooped Up Cooking</h2>
+            <p>Find delicious recipies using only the items in your pantry!</p>
        </section> 
        
 
        <section class="pantryItems container" style="width:60%;">
             <h2 class="items h2">Pantry items</h2>
-            <p style="font-size:large; color: #ecfdf1;">Add your pantry items to the list then hit Search!</p>
+            <p>Add your pantry items to the list then hit Search!</p>
             <div>
 
                 <input class="input" placeholder="add items" id="pantryiteminput"></input>
                 <button type="button" class="btn btn-info" id="pantryitementrybtn">Add</button>
               </div>    
-            <div class="listItem" style="color: white;">
+            <div class="listItem">
                 <ul class="pantryitemslist" id="pantryitemslist"></ul>
             </div>
-            <button type="button" class="searchBtn btn-light" id="searchBtn">Search</button>
+            <button type="button" class="searchBtn" id="searchBtn">Search</button>
             <div>
-            <button type="button" class="emptypantryBtn btn-dark" id="EmptypantryBtn">empty pantry</button>
+            <button type="button" class="emptypantryBtn" id="EmptypantryBtn">empty pantry</button>
         </div>
           </section>
     </main>

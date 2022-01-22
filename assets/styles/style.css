@@ -48,7 +48,8 @@ body {
     cursor: pointer;
     border-radius: 5px;
     margin-top: 20px;
-    
+    background-color: green;
+    color: white;
 }
 
 .emptypantrybtn {
@@ -58,7 +59,8 @@ body {
     cursor: pointer;
     border-radius: 5px;
     margin-top: 20px;
-    
+    background-color: white;
+    color: black;
 }
 
 .input {
@@ -73,7 +75,6 @@ body {
     font-family: 'Cabin', sans-serif;
     font-size: 38px;
     margin: 10px 0;
-    text-decoration: underline;
 }
 
 .pantryitemslist {
