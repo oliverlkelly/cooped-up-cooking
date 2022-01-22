@@ -16,7 +16,7 @@ function createRecipeCards() {
         var recipeCardContainer = document.createElement('div');
         recipeCardContainer.setAttribute("class", "col-4");
         var recipeCardEl = document.createElement('div');
-        recipeCardEl.setAttribute("class", "p-3 border border-primary rounded p-5");
+        recipeCardEl.setAttribute("class", "p-3 border rounded p-5");
         var recipeNameEl = document.createElement("h5");
         recipeNameEl.textContent = recipeNames[i].title;
         recipeNameEl.setAttribute("class", "text-center");
