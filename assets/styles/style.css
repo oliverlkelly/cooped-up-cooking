@@ -29,19 +29,19 @@ body {
     text-align: center;
     margin: 5px 10px;
     border-radius: 10px;
-    padding: 10px 0;
+    padding: 20px;
     min-height: 400px;
     height: max-content;
 }
 
 .message {
     background-color: #e6e6e6ff;
-    vertical-align: middle;
+    height: 10em;
+    padding: 6%;
 }
 
 .pantryItems {
     background-color: #e6e6e6ff;
-
 }
 
 .searchBtn {
@@ -55,7 +55,7 @@ body {
     color: white;
 }
 
-.emptypantrybtn {
+#EmptypantryBtn {
     width: 150px;
     height: 40px;
     font-size: 20px;
@@ -82,11 +82,23 @@ body {
     border-radius: 5px;
     margin-bottom: 20px;
     font-size: 17px;
+    padding: 5px;
+}
+
+h1 {
+    font-family: 'Caveat Brush';
+    font-size: 50px;
+    padding-bottom: 20px;
 }
 
 .h2, .navbar-brand {
-    font-family: 'Caveat Brush', cursive;
+    font-family: 'Caveat Brush';
     font-size: 38px;
+}
+
+h3 {
+    font-family: 'Caveat Brush';
+    font-size: 30px;
 }
 
 .pantryitemslist {
