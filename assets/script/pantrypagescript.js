@@ -31,13 +31,11 @@ function addItem(pantryItem){
         .appendTo(li);
     removebutton();
 }
-// function addToolTips(){
-//     for each item in pantryList
-//     if .find ".toolTip" === 0{
-//         callWiki()
-//         item.append(`<div class="toolTip">${content}<a href="${contentLink}">${contentLink}</a></div>`)
-//     } 
-// }
+function addToolTip(){
+    callWiki()
+    item.append(`<div class="toolTip">${content}<a href="${contentLink}">${contentLink}</a></div>`)
+
+}
 
 var pantryitemslist = [];
 if(localStorage.getItem('pantryitemslist')){
