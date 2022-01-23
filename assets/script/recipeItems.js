@@ -17,11 +17,11 @@ function createRecipeCards() {
             var recipeCardEl = document.createElement('div');
             recipeCardEl.setAttribute("class", "p-3 border rounded p-5");
             var recipeNameEl = document.createElement("h5");
-            recipeNameEl.textContent = recipeNames[i].title;
+            recipeNameEl.textContent = recipeNames.results[i].title;
             recipeNameEl.setAttribute("class", "text-center");
             var recipeImageEl = document.createElement("img");
-            recipeCardEl.setAttribute("id", recipeNames[i].id);
-            recipeImageEl.src = recipeNames[i].image;
+            recipeCardEl.setAttribute("id", recipeNames.results[i].id);
+            recipeImageEl.src = recipeNames.results[i].image;
             recipeImageEl.setAttribute("class", "w-100 p-1");
     
             recipeCardEl.appendChild(recipeNameEl);
