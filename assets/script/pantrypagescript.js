@@ -47,8 +47,8 @@ function addToolTips(element){
     })
     .then(function(data){
         localStorage.setItem(`wiki${srsearch}`, JSON.stringify(data));
-        var content = `${data.search.snippet}...`;
-        var contentLink = `http://en.wikipedia.org/?curid=${data.search.pageid}`;
+        var content = `${data.query.search[0].snippet}...`;
+        var contentLink = `http://en.wikipedia.org/?curid=${data.query.search[0].pageid}`;
         element.append(`<div class="toolTip">${content}<a href="${contentLink}">${contentLink}</a></div>`);
     })
 }
