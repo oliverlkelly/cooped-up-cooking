@@ -35,9 +35,8 @@ function addItem(pantryItem){
 
 var apiWikiUrl = 'https://en.wikipedia.org/w/api.php';
 var srlimit = 1;
-var srsearch; 
-
 function addToolTips(element){
+    var srsearch = element.text();
     apiwiki = `${apiWikiUrl}?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=${srlimit}&srsearch=${srsearch}`;
     fetch(apiwiki, {
         method: 'GET',
@@ -48,6 +47,8 @@ function addToolTips(element){
     })
     .then(function(data){
         localStorage.setItem(`wiki${srsearch}`, JSON.stringify(data));
+        var content = `${data.search.snippet}...`;
+        var contentLink = `http://en.wikipedia.org/?curid=${data.search.pageid}`;
         element.append(`<div class="toolTip">${content}<a href="${contentLink}">${contentLink}</a></div>`);
     })
 }
