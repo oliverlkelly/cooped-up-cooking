@@ -30,13 +30,17 @@ function addItem(pantryItem){
         .appendTo(li);
     removebutton();
 }
-// function addToolTips(){
-//     pantryList.forEach(element => {
-//             callWiki()
-//             element.append(`<div class="toolTip">${content}<a href="${contentLink}">${contentLink}</a></div>`);
-//     }); 
-// }
+//Wiki API call
 
+// var apiWikiUrl = '';
+// var responseFormat = "json";
+// var srlimit = 1;
+// var srsearch = 
+function addToolTips(){
+    callWiki();
+    element.append(`<div class="toolTip">${content}<a href="${contentLink}">${contentLink}</a></div>`);
+}
+ 
 var pantryitemslist = [];
 if(localStorage.getItem('pantryitemslist')){
     pantryitemslist = JSON.parse(localStorage.getItem('pantryitemslist'));
