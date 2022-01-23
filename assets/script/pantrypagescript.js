@@ -29,16 +29,27 @@ function addItem(pantryItem){
     $('<button class="fas fa-trash-alt pantryitemremoveBtn">')
         .appendTo(li);
     removebutton();
+    addToolTips(li);
 }
 //Wiki API call
 
-// var apiWikiUrl = '';
-// var responseFormat = "json";
-// var srlimit = 1;
-// var srsearch = 
-function addToolTips(){
-    callWiki();
-    element.append(`<div class="toolTip">${content}<a href="${contentLink}">${contentLink}</a></div>`);
+var apiWikiUrl = 'https://en.wikipedia.org/w/api.php';
+var srlimit = 1;
+var srsearch; 
+
+function addToolTips(element){
+    apiwiki = `${apiWikiUrl}?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=${srlimit}&srsearch=${srsearch}`;
+    fetch(apiwiki, {
+        method: 'GET',
+        redirect: 'follow',
+    })
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+        localStorage.setItem(`wiki${srsearch}`, JSON.stringify(data));
+        element.append(`<div class="toolTip">${content}<a href="${contentLink}">${contentLink}</a></div>`);
+    })
 }
  
 var pantryitemslist = [];
