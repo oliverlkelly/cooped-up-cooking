@@ -1,6 +1,6 @@
 var searchBtn = document.querySelector("#searchBtn");
 var apiKey = "58cbc000b937473796ed1b4bcb46acc1"
-var apiURL = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=`
+var apiURL = `https://api.spoonacular.com/recipes/complexSearch?apiKey=`
 var pantry;
 var stringOfIngredient = "";
 var apiURLRequest;
@@ -25,8 +25,9 @@ function callAPI(jsonFoodItems){
             })
             .then(function(data){
                 localStorage.setItem("recipeNames", JSON.stringify(data));
+                location.href = 'recipeItems.html';
             })
-            location.href = 'recipeItems.html';
+            
     }
     else{
         window.confirm("Please enter some items");
@@ -45,4 +46,4 @@ searchBtn.addEventListener("click", function(){
 // var responseFormat = "json";
 // var srlimit = 1;
 // var srsearch = 
-// fucntion callWiki
+// function callWiki
