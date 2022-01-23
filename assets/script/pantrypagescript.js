@@ -1,6 +1,5 @@
 function removebutton() {
     var closebtns = document.getElementsByClassName("pantryitemremoveBtn");
-    var i;
     for (i=0;i<closebtns.length; i++) {
         closebtns[i].addEventListener("click", function() {
             JSON.parse(localStorage.getItem('pantryitemslist'));
@@ -32,11 +31,10 @@ function addItem(pantryItem){
     removebutton();
 }
 // function addToolTips(){
-//     for each item in pantryList
-//     if .find ".toolTip" === 0{
-//         callWiki()
-//         item.append(`<div class="toolTip">${content}<a href="${contentLink}">${contentLink}</a></div>`)
-//     } 
+//     pantryList.forEach(element => {
+//             callWiki()
+//             element.append(`<div class="toolTip">${content}<a href="${contentLink}">${contentLink}</a></div>`);
+//     }); 
 // }
 
 var pantryitemslist = [];
