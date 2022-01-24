@@ -45,6 +45,7 @@ body {
 }
 
 .toolTip {
+    display: none;
     border: 5px;
     border-style:double;
     border-color:green;
@@ -53,8 +54,10 @@ body {
     font-size: smaller;
     font-family: 'Caveat Brush'; 
     text-align: center;
-    max-width: 100px;
-    max-height: 50px;
+}
+
+.pantryitem:hover .toolTip {
+    display: block;
 }
 
 .toolTip a {
