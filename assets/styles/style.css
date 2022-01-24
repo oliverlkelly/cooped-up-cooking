@@ -44,6 +44,25 @@ body {
     background-color: #e6e6e6ff;
 }
 
+.toolTip {
+    border: 5px;
+    border-style:double;
+    border-color:green;
+    background-image: linear-gradient(to bottom right, green, lightgreen,silver);
+    color: black;
+    font-size: smaller;
+    font-family: 'Caveat Brush'; 
+    text-align: center;
+    max-width: 100px;
+    max-height: 50px;
+}
+
+.toolTip a {
+    color: blue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: smaller;
+}
+
 .searchBtn {
     width: 150px;
     height: 40px;
@@ -54,6 +73,8 @@ body {
     background-color: green;
     color: white;
 }
+
+
 
 #EmptypantryBtn {
     width: 150px;
