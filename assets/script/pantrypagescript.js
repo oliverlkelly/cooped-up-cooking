@@ -2,6 +2,8 @@ function removebutton() {
     var closebtns = document.getElementsByClassName("pantryitemremoveBtn");
     for (i=0;i<closebtns.length; i++) {
         closebtns[i].addEventListener("click", function() {
+            var toolTip = $(this).siblings(".toolTip");
+            toolTip.remove();
             JSON.parse(localStorage.getItem('pantryitemslist'));
             var pantryitemtoberemoved = $(this).parent("li").text();
             this.parentElement.style.display = 'none';
