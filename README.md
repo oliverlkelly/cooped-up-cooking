@@ -14,7 +14,7 @@ This project allowed me to learn more about the following;
 ## Installation
 
 This project is a webpage, and is deployed on github pages through the following link:
-    https://oliverlkelly.github.io//
+    https://oliverlkelly.github.io/cooped-up-cooking/
 
 The site can also be deployed locally by pulling the file structure to your local machine and opening the index.html file in your browser of preference.
 
