@@ -22,8 +22,14 @@ The site can also be deployed locally by pulling the file structure to your loca
 
 This project can be used as a website. There are other components of the site that can be used for reference, such as the methods and logic used to obtain and present the recipes to the user and the way recipes are stored and manipulated.
 
-![Alt text](./assets/images/ "Screenshot of my web page")
+Welcome page
+![Welcome page](./assets/images/welcome-page.png)
 
+Recipe finder
+![Recipe finder](./assets/images/recipe-finder.png)
+
+Recipe items
+![Recipe items](./assets/images/recipe-items.png)
 
 
 ## Credits
