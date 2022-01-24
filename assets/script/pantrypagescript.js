@@ -29,14 +29,30 @@ function addItem(pantryItem){
     $('<button class="fas fa-trash-alt pantryitemremoveBtn">')
         .appendTo(li);
     removebutton();
+    addToolTips(li);
 }
-// function addToolTips(){
-//     pantryList.forEach(element => {
-//             callWiki()
-//             element.append(`<div class="toolTip">${content}<a href="${contentLink}">${contentLink}</a></div>`);
-//     }); 
-// }
+//Wiki API call
 
+var apiWikiUrl = 'https://en.wikipedia.org/w/api.php';
+var srlimit = 1;
+function addToolTips(element){
+    var srsearch = element.text();
+    apiwiki = `${apiWikiUrl}?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=${srlimit}&srsearch=${srsearch}`;
+    fetch(apiwiki, {
+        method: 'GET',
+        redirect: 'follow',
+    })
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+        localStorage.setItem(`wiki${srsearch}`, JSON.stringify(data));
+        var content = `${data.query.search[0].snippet}...`;
+        var contentLink = `http://en.wikipedia.org/?curid=${data.query.search[0].pageid}`;
+        element.append(`<div class="toolTip">${content}<a href="${contentLink}">${contentLink}</a></div>`);
+    })
+}
+ 
 var pantryitemslist = [];
 if(localStorage.getItem('pantryitemslist')){
     pantryitemslist = JSON.parse(localStorage.getItem('pantryitemslist'));

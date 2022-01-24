@@ -38,12 +38,3 @@ searchBtn.addEventListener("click", function(){
     pantry = localStorage.getItem("pantryitemslist");
     callAPI(pantry);
 });
-
-
-//Wiki API call
-
-// var apiWikiUrl = '';
-// var responseFormat = "json";
-// var srlimit = 1;
-// var srsearch = 
-// function callWiki
